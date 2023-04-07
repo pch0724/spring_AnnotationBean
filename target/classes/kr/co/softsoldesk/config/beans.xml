@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						   http://www.springframework.org/schema/beans/spring-beans.xsd
+						   http://www.springframework.org/schema/context
+	                       http://www.springframework.org/schema/context/spring-context.xsd">
+	                       
+	<!-- Spring 5.1 버전 이상 -->
+	<!-- beans 클래스에 설정되어 있는 Annotation을 이용 -->
+	<context:annotation-config />	
+	<bean id = "xml1" class ="kr.co.softsoldesk.beans.TestBean1">
+		<property name="data1" value ="100"/>
+	</bean>
+	<bean class ="kr.co.softsoldesk.beans.DataBean1"/>
+	
+	<!-- 같은 타입의 클래스를 이름으로 등록 -->
+	<bean id = "obj4" class ="kr.co.softsoldesk.beans.DataBean2"/>
+	<bean id = "obj5" class ="kr.co.softsoldesk.beans.DataBean2"/>
+	<!-- <bean id = "obj6" class ="kr.co.softsoldesk.beans.DataBean2"/> -->
+	
+	<bean id = "xml2" class ="kr.co.softsoldesk.beans.TestBean2"/>
+	<bean class ="kr.co.softsoldesk.beans.DataBean3"/>
+	<bean class ="kr.co.softsoldesk.beans.DataBean4"/>
+	
+</beans>
